@@ -8,8 +8,9 @@ class Solution:
         for n in nums:
             if n == 1:
                 curr_ones += 1
-                max_ones = max(max_ones, curr_ones)
-            else:
-                curr_ones = 0
                 
+            else:
+                max_ones = max(max_ones, curr_ones)
+                curr_ones = 0
+        max_ones = max(max_ones, curr_ones)        
         return max_ones
